@@ -18,7 +18,10 @@ CREATE TABLE produtos(
     descricao TEXT,
     preco DECIMAL(10,2) NOT NULL,
     quantidade INT NOT NULL,
+
+    -- Aqui criamos um id_fornecedor com uma coluna (campo) comum.
     fornecedor_id INT NOT NULL,
+    -- Confoguramos a chave estrangeira, referenciando o id da tabela fornecedores.
     FOREIGN KEY(fornecedor_id) REFERENCES fornecedores(id)
 );
 ```
