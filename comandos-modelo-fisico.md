@@ -24,5 +24,18 @@ CREATE TABLE produtos(
     -- Confoguramos a chave estrangeira, referenciando o id da tabela fornecedores.
     FOREIGN KEY(fornecedor_id) REFERENCES fornecedores(id)
 );
+
+CREATE TABLE lojas_produtos(
+	loja_id INT NOT NULL,
+    produto_id INT NOT NULL,
+    estoque INT NOT NULL,
+
+-- Criando uma chave primária composta, baseada em mais de uma coluna
+
+    PRIMARY KEY(loja_id, produto_id),
+    FOREIGN KEY(loja_id) REFERENCES lojas(id),
+    FOREIGN KEY(produtos_id) REFERENCES produtos(id)
+);
+
 ```
 
