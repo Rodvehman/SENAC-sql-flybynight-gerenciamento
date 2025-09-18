@@ -33,8 +33,9 @@ CREATE TABLE lojas_produtos(
 -- Criando uma chave primária composta, baseada em mais de uma coluna
 
     PRIMARY KEY(loja_id, produto_id),
-    FOREIGN KEY(loja_id) REFERENCES lojas(id),
-    FOREIGN KEY(produtos_id) REFERENCES produtos(id)
+    -- Se na tabela de lojas, uma loja for excluída, TODOS OS REGISTROS de Estoque serão excluídos e da loja também, mantendo integridade do Banco de Dados.
+    FOREIGN KEY(loja_id) REFERENCES lojas(id) ON DELETE CASCADE,
+    FOREIGN KEY(produtos_id) REFERENCES produtos(id) ON DELETE CASCADE
 );
 
 ```
