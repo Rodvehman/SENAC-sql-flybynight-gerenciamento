@@ -12,4 +12,14 @@ CREATE TABLE fornecedores(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE produtos(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    descricao TEXT,
+    preco DECIMAL(10,2) NOT NULL,
+    quantidade INT NOT NULL,
+    fornecedor_id INT NOT NULL,
+    FOREIGN KEY(fornecedor_id) REFERENCES fornecedores(id)
+);
 ```
+
