@@ -22,4 +22,4 @@
         data_publicacao DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         usuario_id INT NOT NULL,
         FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-    )
+    );
