@@ -2,4 +2,4 @@
 
 # Inserir dados em Fornecedores
 '' sql
-    
+    INSERT INTO fornecedores(nome) VALUES ('Eletrônicos Tabajara');
