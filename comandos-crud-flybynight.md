@@ -20,5 +20,5 @@ D -> DELETE -> DELETE
         'Equipamento com sistema Android e câmera FullHD',
         1599.50,
         20,
-        
+        1
         );
