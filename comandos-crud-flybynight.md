@@ -30,4 +30,12 @@ D -> DELETE -> DELETE
         12,
         1
     );
-    
+
+# Inserindo Lojas em LOTE
+    INSERT INTO lojas(nome) VALUES
+        ('Casas Bahia'),
+        ('Shopping Zona Leste'),
+        ('Bazar das Coisas'),
+        ('Americanas');
+
+# 
