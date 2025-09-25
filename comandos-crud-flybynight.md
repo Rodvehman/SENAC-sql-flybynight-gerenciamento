@@ -48,4 +48,7 @@ D -> DELETE -> DELETE
 ''sql
     UPDATE fornecedores SET nome='Distribuidora XYZ' WHERE id = 3;
     UPDATE produtos SET preco = 2600.77, quantidade = 15 WHERE id = 1;
+    UPDATE produtos SET preco = 125 WHERE fornecedor_id = 4;
+    UPDATE lojas_produtos SET quantidade = 5 WHERE loja_id = 4 AND produto_id = 1;
+
     
