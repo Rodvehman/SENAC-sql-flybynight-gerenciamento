@@ -30,6 +30,7 @@ D -> DELETE -> DELETE
         12,
         1
     );
+''
 
 # Inserindo Lojas em LOTE
 ''sql
@@ -51,4 +52,6 @@ D -> DELETE -> DELETE
     UPDATE produtos SET preco = 125 WHERE fornecedor_id = 4;
     UPDATE lojas_produtos SET quantidade = 5 WHERE loja_id = 4 AND produto_id = 1;
 
-    
+# Excluíndo Registros
+''sql
+    DELETE FROM produtos WHERE id = 4;
