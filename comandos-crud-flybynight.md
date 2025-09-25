@@ -22,7 +22,6 @@ D -> DELETE -> DELETE
         20,
         1
         );
-
     INSERT INTO produtos(nome, descricao, quantidade, fornecedor_id) VALUES (
         'TV Led',
         'Tela 50 polegadas, resulução 4k, 4 entradas HDMI e etc e tal',
@@ -55,3 +54,21 @@ D -> DELETE -> DELETE
 # Excluíndo Registros
 ''sql
     DELETE FROM produtos WHERE id = 4;
+
+# Contando registros em uma tabela
+''sql
+    SELECT COUNT(*) FROM produtos;
+    SELECT nome, preco, quantidade FROM produtos;
+    SELECT nome, preco, quantidade FROM produtos WHERE preco > 1000;
+
+# Usando uma junção de tabelas(produtos e fornecedores), para exibir o nome do fornecedor
+''sql
+    SELECT 
+        fornecedores.id, 
+        fornecedores.nome, 
+        produtos.nome, 
+        produtos.descricao, 
+        produtos.preco 
+    FROM produtos JOIN fornecedores 
+    ON produtos.fornecedor_id = fornecedores.id 
+    WHERE produtos.fornecedor_id = 4;
