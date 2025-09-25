@@ -32,10 +32,15 @@ D -> DELETE -> DELETE
     );
 
 # Inserindo Lojas em LOTE
+''sql
     INSERT INTO lojas(nome) VALUES
         ('Casas Bahia'),
         ('Shopping Zona Leste'),
         ('Bazar das Coisas'),
         ('Americanas');
 
-# 
+# Inserindo estoque de produtos para cada loja
+''sql    
+    INSERT INTO lojas_produtos(loja_id, produto_id, estoque) VALUES
+        (4,2,500);
+
