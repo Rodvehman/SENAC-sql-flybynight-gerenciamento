@@ -22,3 +22,12 @@ D -> DELETE -> DELETE
         20,
         1
         );
+
+    INSERT INTO produtos(nome, descricao, quantidade, fornecedor_id) VALUES (
+        'TV Led',
+        'Tela 50 polegadas, resulução 4k, 4 entradas HDMI e etc e tal',
+        3420,
+        12,
+        1
+    );
+    
