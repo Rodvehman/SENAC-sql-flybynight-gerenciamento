@@ -18,3 +18,7 @@ a:hover{
     color: black;
     text-decoration: underline;
 }
+
+img{
+    size: 200px;
+}
