@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <div><img src="./images/flybynight-cover-ss.jpg" alt=""></div>
+    <div><img id="coruja" src="./images/flybynight-cover-ss.jpg" alt=""></div>
     <h1>Fly By Night - CRUD com PHP e SQL</h1>
     <h2>Gerenciar</h2>
     <ul>
