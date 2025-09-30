@@ -7,7 +7,7 @@
     // Retronará um array associativo com os fornecedores
     function buscarFornecedores($conexao){
             // Montamos o comando SQL para consulta
-            $sql = "SELECT * FROM Fornecedores";
+            $sql = "SELECT * FROM Fornecedores ORDER BY nome";
             // Executamos e guardamos o resultado da consulta
             $consulta = $conexao -> query($sql);
             // Retornamos o resultado em formato de Array Associativo
