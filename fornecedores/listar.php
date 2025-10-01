@@ -38,7 +38,7 @@
                     <td><?=$fornecedor['id']?></td>
                     <td><?=$fornecedor["nome"]?></td>
                     <td>
-                        <!-- Repassando o ID para o registro e ser editado -->
+                        <!-- Link Dinâmico - Repassando o(s) dado(s) (no caso ID) para o registro e ser editado -->
                         <a href="../fornecedores/editar.php?id=<?=$fornecedor['id']?>">Editar</a>
                         <a href="">Excluir</a>
                     </td>
