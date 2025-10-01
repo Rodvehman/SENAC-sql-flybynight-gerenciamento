@@ -43,8 +43,7 @@
         $consulta = $conexao -> prepare($sql); //prepare: coloca o comando na memória
         $consulta -> bindValue(':id', $id); // bindValue: liga o valor ($id) ao parâmetro (:id)
         $consulta -> execute(); // execute: roda a consulta no banco
-        return $consulta -> fetch();// retorna o resultado da consulta como um Array
+        return $consulta -> fetch();// retorna o resultado da consulta como um vetor
         
-
     }
 ?>
