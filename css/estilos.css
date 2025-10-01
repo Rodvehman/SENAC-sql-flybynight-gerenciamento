@@ -37,3 +37,13 @@ th, td{
 th{
     background-color: #ccc;
 }
+
+form{
+    background-color: white;
+    pad: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+}
