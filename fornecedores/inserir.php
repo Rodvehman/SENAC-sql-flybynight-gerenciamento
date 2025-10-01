@@ -29,6 +29,6 @@
         </div>
         <button type="submit">Salvar</button>
     </form>
-    <a href="./listar.php">🔙 Voltar</a>
+    <a href="../fornecedores/listar.php">🔙 Voltar</a>
 </body>
 </html>

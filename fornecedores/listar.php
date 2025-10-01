@@ -21,7 +21,7 @@
 </head>
 <body>
     <h1>Fornecedores</h1>
-    <a href="../fornecedores/listar.php">+ Novo Fornecedor</a>
+    <a href="../fornecedores/inserir.php">+ Novo Fornecedor</a>
     <a href="../index.php">🔙 Voltar</a>
     <!-- Estruturando uma tabela HTML para exibir os dados -->
      <table>

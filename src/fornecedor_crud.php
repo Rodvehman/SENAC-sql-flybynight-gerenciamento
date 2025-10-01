@@ -16,7 +16,7 @@
 
     function inserirFornecedor($conexao, $nome){
         // Montando comando SQL de INSERT e aplicando um "named parameter". Parâmetro nomeado é utilizado para atribuir um valor.
-        $sql = "INCLUDE INTO Fornecedores(nome) Values (:nome)";
+        $sql = "INSERT INTO fornecedores(nome) VALUES (:nome)";
         // Prepare o comando acima antes de executar no BD.
         $consulta = $conexao -> prepare($sql);
         // Anexar/Atrelar um valor

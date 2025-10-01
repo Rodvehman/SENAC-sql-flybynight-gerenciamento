@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25/09/2025 às 20:27
+-- Tempo de geração: 01/10/2025 às 19:04
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -39,9 +39,14 @@ CREATE TABLE `fornecedores` (
 INSERT INTO `fornecedores` (`id`, `nome`) VALUES
 (1, 'Eletrônicos Tabajara'),
 (2, 'Games ABC'),
-(3, 'Supermercado Tem de Tudo'),
+(3, 'Distribuidora XYW'),
 (4, 'Livraria Demais da Conta'),
-(5, 'Loja Teste');
+(5, 'Loja Teste'),
+(6, 'Atacadão das Carnes'),
+(7, 'Microsoft'),
+(8, 'Amazon'),
+(9, 'Magazine Luiza'),
+(10, 'Mercado Livre');
 
 -- --------------------------------------------------------
 
@@ -82,7 +87,7 @@ CREATE TABLE `lojas_produtos` (
 
 INSERT INTO `lojas_produtos` (`loja_id`, `produto_id`, `estoque`) VALUES
 (1, 2, 10),
-(4, 1, 5),
+(4, 1, 7),
 (4, 2, 3),
 (4, 3, 30);
 
@@ -106,9 +111,11 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `quantidade`, `fornecedor_id`) VALUES
-(1, 'Smartphone Galaxy S23', 'Equipamento com sistema Android e câmera Full HD', 1599.50, 20, 1),
+(1, 'Smartphone Galaxy S23', 'Equipamento com sistema Android e câmera Full HD', 2600.77, 15, 1),
 (2, 'Tv Led', 'Tela com 50 polegadas, resolução 4K, 4 entradas HDMI e etc e tal', 3420.00, 12, 1),
-(3, 'Senhor dos Anéis: As Duas Torres', 'Volume 2 da série livros criados pelo autor J.R.R. Tolkien', 80.99, 100, 4);
+(3, 'Senhor dos Anéis: As Duas Torres', 'Volume 2 da série livros criados pelo autor J.R.R. Tolkien', 125.00, 100, 4),
+(5, 'Ghost Rider', 'Livro contando a estória de Niel Peart.', 125.00, 60, 4),
+(6, 'Senhor dos Anéis: A Sociedade do Anel', 'Primeiro livro da saga Senhor dos Anéis.', 125.00, 32, 4);
 
 --
 -- Índices para tabelas despejadas
@@ -148,7 +155,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `lojas`
@@ -160,7 +167,7 @@ ALTER TABLE `lojas`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para tabelas despejadas
