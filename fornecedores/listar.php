@@ -29,6 +29,7 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ações</th>
         </tr>
         <!-- As linhas abaixo (tr/td), serão geradas dinâmicamente, usando um looping no array Fornecedores -->
          <?php
@@ -36,6 +37,10 @@
                 <tr>
                     <td><?=$fornecedor['id']?></td>
                     <td><?=$fornecedor["nome"]?></td>
+                    <td>
+                        <a href="../fornecedores/editar.php">Editar</a>
+                        <a href="">Excluir</a>
+                    </td>
                 </tr>
             <?php } ?>
 
