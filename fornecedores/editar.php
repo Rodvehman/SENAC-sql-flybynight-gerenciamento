@@ -1,3 +1,9 @@
+<?php
+    // Pegando da URL o parâmetro chamado id
+    $id = $_GET['id'];
+    echo $id;
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
