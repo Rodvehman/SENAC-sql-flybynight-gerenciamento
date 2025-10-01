@@ -40,12 +40,10 @@
                     <td>
                         <!-- Link Dinâmico - Repassando o(s) dado(s) (no caso ID) para o registro e ser editado -->
                         <a href="../fornecedores/editar.php?id=<?=$fornecedor['id']?>">Editar</a>
-                        <a href="">Excluir</a>
+                        <a href="../fornecedores/excluir.php?id=<?=$fornecedor['id']?>">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>
-
-            
      </table>
 </body>
 </html>
