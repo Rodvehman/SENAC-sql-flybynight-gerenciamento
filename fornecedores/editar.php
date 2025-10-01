@@ -9,8 +9,14 @@
     // echo "<pre>";
     // var_dump($fornecedor);
     // echo "</pre>";
-
-      
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $nome = $_POST['nome'];
+        atualizarFornecedor($conexao, $nome, $id);
+        // Após direcionar usando header()...
+        header("location:listar.php");
+        // ... sempre encerre/interrompa o script (evitando erros/execuções adicionais)
+        exit;
+    }      
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
