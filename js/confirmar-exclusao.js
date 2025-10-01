@@ -3,4 +3,10 @@
 // Seçecionando todos os links de Excluir
 const links = document.querySelectorAll('.excluir');
 
-console.log(links);
+for(const link of links){
+    link.addEventListener("click", function(event){
+        // Anular comportamento padrão do evento
+        event.preventDefault();
+        console.log("Clicou!!");
+    })    
+}
