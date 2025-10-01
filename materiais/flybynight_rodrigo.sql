@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/10/2025 às 19:04
+-- Tempo de geração: 01/10/2025 às 22:25
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -37,16 +37,11 @@ CREATE TABLE `fornecedores` (
 --
 
 INSERT INTO `fornecedores` (`id`, `nome`) VALUES
-(1, 'Eletrônicos Tabajara'),
-(2, 'Games ABC'),
+(1, 'Eletrônicos da Bagaça'),
 (3, 'Distribuidora XYW'),
-(4, 'Livraria Demais da Conta'),
-(5, 'Loja Teste'),
+(4, 'Livraria Casa do Livro'),
 (6, 'Atacadão das Carnes'),
-(7, 'Microsoft'),
-(8, 'Amazon'),
-(9, 'Magazine Luiza'),
-(10, 'Mercado Livre');
+(8, 'Amazon');
 
 -- --------------------------------------------------------
 
@@ -155,7 +150,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `lojas`

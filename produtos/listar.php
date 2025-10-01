@@ -1,16 +1,3 @@
-<?php
-    // Importando o arquivo de funções CRUD para Fornecedores
-    require_once "../src/fornecedor_crud.php";
-
-    // Chama a função (passando a conexão) e recebe um array associativo com os dados
-    $produtos = buscarFornecedores($conexao);
-
-    // Testando a exibição dos dados (só para visualizar os dados)
-    //var_dump($fornecedores);
-    // echo  "<pre>";
-    // var_dump($fornecedores);
-    // echo "</pre>";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +8,7 @@
 </head>
 <body>
     <h1>Fornecedores</h1>
-    <a href="../fornecedores/inserir.php">+ Novo Produto</a>
+    <a href="../produtos/inserir.php">+ Novo Produto</a>
     <a href="../index.php">🔙 Voltar</a>
     <!-- Estruturando uma tabela HTML para exibir os dados -->
      <table>
@@ -44,8 +31,8 @@
                     <td><?=$produto["acoes"]?></td>
                     <td>
                         <!-- Link Dinâmico - Repassando o(s) dado(s) (no caso ID) para o registro e ser editado -->
-                        <a href="../fornecedores/editar.php?id=<?=$produto['id']?>">Editar</a>
-                        <a class="excluir" href="../fornecedores/excluir.php?id=<?=$produto['id']?>">Excluir</a>
+                        <a href="../produtos/editar.php?id=<?=$produto['id']?>">Editar</a>
+                        <a class="excluir" href="../produtos/excluir.php?id=<?=$produto['id']?>">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>
