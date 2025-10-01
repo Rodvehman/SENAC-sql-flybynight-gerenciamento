@@ -7,6 +7,7 @@ for(const link of links){
     link.addEventListener("click", function(event){
         // Anular comportamento padrão do evento
         event.preventDefault();
-        console.log("Clicou!!");
+        
+        confirm("Deseja realmente excluir este registro?");
     })    
 }
