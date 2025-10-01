@@ -35,7 +35,7 @@ CREATE TABLE lojas_produtos(
     PRIMARY KEY(loja_id, produto_id),
     -- Se na tabela de lojas, uma loja for excluída, TODOS OS REGISTROS de Estoque serão excluídos e da loja também, mantendo integridade do Banco de Dados.
     FOREIGN KEY(loja_id) REFERENCES lojas(id) ON DELETE CASCADE,
-    -- Ao tentar excluír um produto, se este pruduto estiver em uso, não podemos permitir a exclusão.
+    -- Ao tentar excluír um produto, se este pruduto estiver em uso, não podemos permitir a exclusão. Esse é padrão. Para deletar os produtos e fornecedores ON DELETE CASCADE.
     FOREIGN KEY(produto_id) REFERENCES produtos(id) ON DELETE RESTRICT
 );
 
