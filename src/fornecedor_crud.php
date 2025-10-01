@@ -37,4 +37,14 @@
         $consulta -> execute();
     }
 
+    // Vai Receber o ID do Fornecedor a ser carregado, e depois atualizado
+    function buscarFornecedorPorId($conexao, $id){
+        $sql = "SELECT * FROM Fornecedores WHERE id= :id";
+        $consulta = $conexao -> prepare($sql); //prepare: coloca o comando na memória
+        $consulta -> bindValue(':id', $id); // bindValue: liga o valor ($id) ao parâmetro (:id)
+        $consulta -> execute(); // execute: roda a consulta no banco
+        return $consulta -> fetch();// retorna o resultado da consulta como um Array
+        
+
+    }
 ?>
