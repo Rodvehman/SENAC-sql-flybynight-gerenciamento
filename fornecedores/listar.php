@@ -38,7 +38,8 @@
                     <td><?=$fornecedor['id']?></td>
                     <td><?=$fornecedor["nome"]?></td>
                     <td>
-                        <a href="../fornecedores/editar.php">Editar</a>
+                        <!-- Repassando o ID para o registro e ser editado -->
+                        <a href="../fornecedores/editar.php?id=<?=$fornecedor['id']?>">Editar</a>
                         <a href="">Excluir</a>
                     </td>
                 </tr>
