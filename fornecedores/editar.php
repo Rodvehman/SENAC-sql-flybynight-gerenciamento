@@ -1,6 +1,16 @@
 <?php
+    require_once '../src/fornecedor_crud.php';
+
     // Pegando da URL o parâmetro chamado id
     $id = $_GET['id'];
+    // Chamamos a função, passando a conexão e o id do fornecedor a ser buscado
+    $fornecedor = buscarFornecedorPorId($conexao, $id);
+    
+    // echo "<pre>";
+    // var_dump($fornecedor);
+    // echo "</pre>";
+
+    
     
     
 ?>
