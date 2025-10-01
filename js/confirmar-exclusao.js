@@ -8,6 +8,10 @@ for(const link of links){
         // Anular comportamento padrão do evento
         event.preventDefault();
         
-        confirm("Deseja realmente excluir este registro?");
-    })    
+        let resposta = confirm("Deseja realmente excluir este registro?");
+        if (resposta){
+            // Redirecionamos para o endereço (href) do link
+            location.href = link.href;
+        }
+    });
 }
