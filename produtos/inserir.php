@@ -1,12 +1,12 @@
 <?php
-    require_once "../src/fornecedor_crud.php";
+    require_once "../src/produtos_crud.php";
 
     // Se o método POST for acionado
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Então vamos pegar o valor do campo nome (via atributo NAME)
         $nome = $_POST['nome'];
         // Chamamos a função, passamos os dados de conexão e o valor digitado
-        inserirFornecedor($conexao, $nome);
+        inserirProdutos($conexao, $nome);
         // Redirecionamos para a página listar.php
         header("location:listar.php");
         exit;
@@ -18,10 +18,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Inserir Fornecedor</title>
+    <title>Inserir Produtos</title>
 </head>
 <body>
-    <h1>Adicionando um novo fornecedor</h1>
+    <h1>Adicionando um novo produto</h1>
     <form action="" method="post">
         <div>
             <label for="nome">Nome: </label>
@@ -29,6 +29,6 @@
         </div>
         <button type="submit">Salvar</button>
     </form>
-    <a href="../fornecedores/listar.php">🔙 Voltar</a>
+    <a href="../produtos/listar.php">🔙 Voltar</a>
 </body>
 </html>

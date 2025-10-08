@@ -7,7 +7,7 @@
     <title>Listar Produtos</title>
 </head>
 <body>
-    <h1>Fornecedores</h1>
+    <h1>Produtos</h1>
     <a href="../produtos/inserir.php">+ Novo Produto</a>
     <a href="../index.php">🔙 Voltar</a>
     <!-- Estruturando uma tabela HTML para exibir os dados -->

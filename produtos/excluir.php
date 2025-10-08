@@ -1,8 +1,8 @@
 <?php
-    require_once '../src/fornecedor_crud.php';
+    require_once '../src/produtos_crud.php';
 
     $id = $_GET['id'];
-    excluirFornecedor($conexao, $id);
+    excluirProdutos($conexao, $id);
     header("location:listar.php");
     exit;
 ?>
