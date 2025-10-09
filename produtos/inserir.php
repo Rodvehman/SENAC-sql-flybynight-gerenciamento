@@ -34,6 +34,7 @@
             <label for="fornecedor_id">ID Fornecedor</label>
             <input type="int" name="fornecedor_id" id="fornecedor_id">
         </div>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
