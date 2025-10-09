@@ -34,7 +34,7 @@
                 <td><?=$produto['quantidade']?></td>
                 <td>
                     <a href="">Editar</a>
-                    <a href="">Excluir</a>
+                    <a href="../produtos/excluir.php">Excluir</a>
                 </td>
             </tr>
     <?php } ?>

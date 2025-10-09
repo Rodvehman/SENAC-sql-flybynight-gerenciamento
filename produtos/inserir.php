@@ -14,7 +14,7 @@
             $descricao = $_POST['descricao'];
             $preco = $_POST['preco'];
             $quantidade = $_POST['quantidade'];
-            $fornecedor_is = $_POST['fornecedor_id'];
+            $fornecedor_id = $_POST['fornecedor_id'];
             inserirProduto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor_id);
             header("location:listar.php");
             exit;
@@ -36,5 +36,6 @@
         </div>
         <button type="submit">Enviar</button>
     </form>
+    <a href="../produtos/listar.php">🔙 Voltar</a>
 </body>
 </html>
