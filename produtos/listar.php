@@ -30,8 +30,7 @@
                     <td><?=$produto['nome']?></td>
                     <td><?=$produto["preco"]?></td>
                     <td><?=$produto["quantidade"]?></td>
-                    <td><?=$produto["fornecedor"]?></td>
-                    <td><?=$produto["acoes"]?></td>
+                    <td><?=$produto["fornecedor_id"]?></td>
                     <td>
                         <a href="../produtos/editar.php?id=<?=$produto['id']?>">Editar</a>
                         <a class="excluir" href="../produtos/excluir.php?id=<?=$produto['id']?>">Excluir</a>
