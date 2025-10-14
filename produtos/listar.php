@@ -1,3 +1,8 @@
+<?php
+    require_once "../src/produtos_crud.php";
+
+    $produtos = buscarProdutos($conexao);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +15,6 @@
     <h1>Produtos</h1>
     <a href="../produtos/inserir.php">+ Novo Produto</a>
     <a href="../index.php">🔙 Voltar</a>
-    <!-- Estruturando uma tabela HTML para exibir os dados -->
      <table>
         <caption>Relação de Produtos</caption>
         <tr>
@@ -20,7 +24,6 @@
             <th>Fornecedor</th>
             <th>Ações</th>
         </tr>
-        <!-- As linhas abaixo (tr/td), serão geradas dinâmicamente, usando um looping no array Produtos -->
          <?php
             foreach($produtos as $produto){?>
                 <tr>
@@ -30,7 +33,6 @@
                     <td><?=$produto["fornecedor"]?></td>
                     <td><?=$produto["acoes"]?></td>
                     <td>
-                        <!-- Link Dinâmico - Repassando o(s) dado(s) (no caso ID) para o registro e ser editado -->
                         <a href="../produtos/editar.php?id=<?=$produto['id']?>">Editar</a>
                         <a class="excluir" href="../produtos/excluir.php?id=<?=$produto['id']?>">Excluir</a>
                     </td>
