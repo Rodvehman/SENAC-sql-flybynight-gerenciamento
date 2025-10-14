@@ -30,10 +30,10 @@
     <h1>Editar Produtos</h1>
     <form action="" method="post">
         <!-- Sempre coloque o código/id do registro de forma oculta no formulário -->
-        <input type="hidden" name="id" value="<?=$produtos['id']?>">
+        <input type="hidden" name="id" value="<?=$produto['id']?>">
         <div>
             <label for="nome">Nome: </label>
-            <input value="<?=$$produtos['nome']?>" type="text" name="nome" id="nome" required>
+            <input value="<?=$$produto['nome']?>" type="text" name="nome" id="nome" required>
         </div>
         <button type="submit">Atualizar</button>
     </form>

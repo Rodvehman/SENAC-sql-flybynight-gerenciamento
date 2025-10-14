@@ -20,7 +20,7 @@
             <th>Fornecedor</th>
             <th>Ações</th>
         </tr>
-        <!-- As linhas abaixo (tr/td), serão geradas dinâmicamente, usando um looping no array Fornecedores -->
+        <!-- As linhas abaixo (tr/td), serão geradas dinâmicamente, usando um looping no array Produtos -->
          <?php
             foreach($produtos as $produto){?>
                 <tr>
