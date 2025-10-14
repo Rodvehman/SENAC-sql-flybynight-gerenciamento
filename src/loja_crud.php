@@ -1,3 +1,12 @@
+<?php
+    require_once "../conecta.php";
+
+    function buscarLojas($conexao){
+        $sql = "SELECT * FROM lojas";
+        $consulta = $conexao -> query($sql);
+        return $consulta -> fetchAll();
+    };
+?>
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>

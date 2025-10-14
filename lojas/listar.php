@@ -1,5 +1,5 @@
 <?php
-    require_once "lojas_crud.php";
+    require_once "../src/loja_crud.php";
 
     $lojas = buscarLojas($conexao);
 ?>
@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Relação de Lojas</title>
 </head>
 <body>
@@ -22,13 +23,17 @@
             <th>Ações</th>
         </tr>
         <?php
-            foreach ($lojas as $loja){
-                <td><?=$loja['id']?></td>
-                <td<?=$loja['nome']?</td>
-                <a href="http://">Editar</a>
-                <a href="http://">Excluir</a>
-            }
-        ?>
+            foreach ($lojas as $loja) {?>
+                <tr>
+                    <td><?=$loja['id']?></td>
+                    <td><?=$loja['nome']?></td>
+                    <td>
+                        <a href="../lojas/editar.php">Editar</a>
+                        <a href="../lojas/excluir.php">Excluir</a>
+                    </td>                
+                </tr> 
+        <?php } ?>
     </table>
+    <script src="../js/confirmar-exclusao.js"></script>
 </body>
 </html>
