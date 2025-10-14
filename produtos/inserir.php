@@ -8,6 +8,7 @@
 <body>
     <?php
         require_once "../src/produtos_crud.php";
+        require_once "../src/fornecedor_crud.php";
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $nome = $_POST['nome'];
@@ -19,23 +20,40 @@
             header("location:listar.php");
             exit;
         }
+
+        $fornecedores = buscarFornecedores($conexao);
     ?>
     <h1>Adicionando um novo Produto</h1>
+    <a href="../produtos/listar.php">🔙 Voltar</a>
     <form action="" method="post">
         <div>
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" required>
-            <label for="descricao">Descrição: </label>
-            <input type="text" name="descricao" id="descricao" required>
-            <label for="preco">Preço: </label>
-            <input type="float" name="preco" id="preco">
-            <label for="quantidade">Quantidade: </label>
-            <input type="int" name="quantidade" id="quantidade">
-            <label for="fornecedor_id">ID Fornecedor</label>
-            <input type="int" name="fornecedor_id" id="fornecedor_id">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div>
+                <label for="descricao">Descrição: </label>
+                <input type="text" name="descricao" id="descricao" required>
+            </div>
+            <div>
+                <label for="preco">Preço: </label>
+                <input type="float" name="preco" id="preco">
+            </div>
+            <div>
+                <label for="quantidade">Quantidade: </label>
+                <input type="int" name="quantidade" id="quantidade">
+            </div>
+            <div>
+            <label for="fornecedor_id">Fornecedor</label>
+                <select type="int" name="fornecedor" id="fornecedor">
+                    <option value=""></option>
+                    <?php foreach($fornecedores as $fornecedor): ?>
+                    <option value="<?=$fornecedor['id']?>"><?=$fornecedor['nome']?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
         </div>
         <button type="submit">Enviar</button>
     </form>
-    <a href="../produtos/listar.php">🔙 Voltar</a>
 </body>
 </html>

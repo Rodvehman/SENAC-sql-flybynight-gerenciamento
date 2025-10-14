@@ -54,7 +54,7 @@
                 <input value="<?=$produto['quantidade']?>" type="int" name="quantidade" id="quantidade">
             </div>
             <div>
-                <label for="fornecedor_id">ID Fornecedor</label>
+                <label for="fornecedor_id">Fornecedor</label>
                 <select type="int" name="fornecedor_id" id="fornecedor_id">
                 <option value=""></option>
                     <?php foreach($fornecedores as $fornecedor): ?>
