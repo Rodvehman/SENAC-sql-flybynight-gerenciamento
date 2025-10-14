@@ -39,7 +39,7 @@
         $consulta -> execute();
     }
 
-    function buscarProdutoPorID($conexao, $id){
+    function buscarProdutoPorId($conexao, $id){
         $sql = "SELECT * FROM produtos WHERE id = :id";
         $consulta = $conexao -> prepare($sql);
         $consulta -> bindValue(":id", $id);
