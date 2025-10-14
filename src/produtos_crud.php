@@ -16,7 +16,12 @@
     require_once '../conecta.php';
 
     function buscarProdutos($conexao){
-        $sql = "SELECT * FROM Produtos";
+        $sql = "SELECT
+        produtos.id, produtos.nome AS nome_produto, produtos.preco, produtos.quantidade, fornecedores.nome AS nome_fornecedor FROM
+        produtos JOIN fornecedores ON
+        fornecedores.id = produtos.fornecedor_id 
+        ORDER BY
+        produtos.nome";
         $consulta = $conexao -> query($sql);
         return $consulta -> fetchAll();
     }
@@ -45,5 +50,23 @@
         $consulta -> bindValue(":id", $id);
         $consulta -> execute();
         return $consulta -> fetch();
+    }
+
+    function atualizarProduto($conexao, $id, $nome, $descricao, $preco, $quantidade, $fornecedor_id){
+        $sql = "UPDATE produtos SET 
+                        nome = :nome,
+                        descricao = :descricao,
+                        preco = :preco,
+                        quantidade = :quantidade;
+                        fornecedor_id = :fornecedor_id
+                        WHERE id = :id";
+        $consulta = $conexao -> prepare($sql);
+        $consulta -> bindValue(":nome", $nome);
+        $consulta -> bindValue(":descricao", $descricao);
+        $consulta -> bindvValue(":preco", $preco);
+        $consulta -> bindValue(":quantidade", $quantidade);
+        $consulta -> bindValue(":fornecedor_id", $fornecedor_id);
+        $consulta -> bindValue(":id", $id);
+        $consulta -> execute();
     }
 ?>
