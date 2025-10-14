@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+    require_once "../src/fornecedor_crud.php";
+
+    $fornecedores = buscarFornecedores($conexao);
+
+?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -19,10 +24,14 @@
             <label for="quantidade">Quantidade: </label>
             <input type="int" name="quantidade" id="quantidade">
             <label for="fornecedor_id">ID Fornecedor</label>
-            <input type="int" name="fornecedor_id" id="fornecedor_id">
-            
+            <select type="int" name="fornecedor_id" id="fornecedor_id">
+            <option value=""></option>
+                <?php foreach($fornecedores as $fornecedor): ?>
+                <option value="<?=$fornecedor['id']?>"><?=$fornecedor['nome']?></option>
+                <?php endforeach?>
+                
         </div>
-        <button type="submit">Atualizar</button>
+            <button type="submit">Atualizar</button>
     </form>
 
     <a href="../produtos/listar.php">🔙 Voltar</a>
