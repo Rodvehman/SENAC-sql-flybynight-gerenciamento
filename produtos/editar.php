@@ -5,9 +5,20 @@
     $id = $_GET['id'];
     
     $produto =  buscarProdutoPorId($conexao, $id);
-   
+
     $fornecedores = buscarFornecedores($conexao);
     
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $nome = $_POST['nome'];
+        $descricao = $_POST['descricao'];
+        $preco = $_POST['preco'];
+        $quantidade = $_POST['quantidade'];
+        $fornecedor_id = $_POST["fornecedor_id"];
+        
+        atualizarProduto($conexao, $id, $nome, $descricao, $preco, $quantidade, $fornecedor_id);
+        header("location:listar.php");
+        exit;
+    }
 
 ?><!DOCTYPE html>
 <html lang="pt-br">

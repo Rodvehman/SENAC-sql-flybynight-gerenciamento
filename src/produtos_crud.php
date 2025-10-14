@@ -57,13 +57,13 @@
                         nome = :nome,
                         descricao = :descricao,
                         preco = :preco,
-                        quantidade = :quantidade;
+                        quantidade = :quantidade,
                         fornecedor_id = :fornecedor_id
                         WHERE id = :id";
         $consulta = $conexao -> prepare($sql);
         $consulta -> bindValue(":nome", $nome);
         $consulta -> bindValue(":descricao", $descricao);
-        $consulta -> bindvValue(":preco", $preco);
+        $consulta -> bindValue(":preco", $preco);
         $consulta -> bindValue(":quantidade", $quantidade);
         $consulta -> bindValue(":fornecedor_id", $fornecedor_id);
         $consulta -> bindValue(":id", $id);
