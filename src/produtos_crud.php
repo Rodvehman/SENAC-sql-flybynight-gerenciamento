@@ -69,4 +69,11 @@
         $consulta -> bindValue(":id", $id);
         $consulta -> execute();
     }
+
+    function excuirProduto($conexao, $id){
+        $sql = "DELETE FROM Produtos WHERE id = :id";
+        $consulta = $conexao -> prepare($sql);
+        $consulta -> bindValue(":id", $id);
+        $consulta -> execute();
+    }
 ?>
