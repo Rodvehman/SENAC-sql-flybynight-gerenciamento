@@ -14,7 +14,7 @@
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required>
         </div>
-        <button type="button">Salvar</button>
+        <button type="submit">Salvar</button>
     </form>
     <?php
         require_once "../src/loja_crud.php";
