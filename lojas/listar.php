@@ -4,6 +4,7 @@
     $lojas = buscarLojas($conexao);
 ?>
 <!DOCTYPE html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
     <h1>Lojas</h1>
     <a href="../lojas/inserir.php">+ Nova Loja</a>
     <a href="../index.php">🔙 Voltar</a>
-    <table>
+    <table class="table table-striped">
         <caption>Relação das Lojas</caption>
         <tr>
             <th>ID</th>
