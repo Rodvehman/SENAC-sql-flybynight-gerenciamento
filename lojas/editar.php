@@ -3,8 +3,6 @@
 
     $id = $_GET['id'];
 
-    buscarLojas($conexao);
-
     $loja = buscalLojasPorID($conexao, $id);
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){

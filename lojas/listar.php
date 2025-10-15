@@ -28,7 +28,7 @@
                     <td><?=$loja['id']?></td>
                     <td><?=$loja['nome']?></td>
                     <td>
-                        <a href="../lojas/editar.php">Editar</a>
+                        <a href="../lojas/editar.php?id=<?=$loja['id']?>">Editar</a>
                         <a href="../lojas/excluir.php">Excluir</a>
                     </td>                
                 </tr> 
