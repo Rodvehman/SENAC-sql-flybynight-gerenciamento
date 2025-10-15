@@ -19,16 +19,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Editar Loja</title>
+</head>
+<body>
+    <h1>Editando Loja</h1>
+    <a href="../lojas/listar.php">🔙 Voltar</a>
     <form action="" method="post">
         <input type="hidden" name="id" value="<?=$loja['id']?>">
         <div>
             <label for="nome">Nome:</label>
             <input value="<?=$loja['nome']?>" type="text" name="nome" id="nome" required>
         </div>
+        <button type="submit">Atualizar</button>
     </form>
-    <button type="submit">Atualizar</button>
-</head>
-<body>
-    
 </body>
 </html>

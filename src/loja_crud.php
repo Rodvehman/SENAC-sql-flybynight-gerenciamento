@@ -29,6 +29,13 @@
         $consulta -> bindValue(':id', $id);
         $consulta -> execute();
     }
+
+    function excluirLoja($conexao, $id){
+        $sql = "DELETE FROM Lojas WHERE id = :id";
+        $consulta = $conexao -> prepare($sql);
+        $consulta -> bindValue(':id', $id);
+        $consulta -> execute();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
