@@ -22,6 +22,7 @@
 </head>
 <body>
     <h1>Adicionando um novo fornecedor</h1>
+    <a href="../fornecedores/listar.php">🔙 Voltar</a>
     <form action="" method="post">
         <div>
             <label for="nome">Nome: </label>
@@ -29,6 +30,5 @@
         </div>
         <button type="submit">Salvar</button>
     </form>
-    <a href="../fornecedores/listar.php">🔙 Voltar</a>
 </body>
 </html>
