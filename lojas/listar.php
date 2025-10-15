@@ -29,7 +29,7 @@
                     <td><?=$loja['nome']?></td>
                     <td>
                         <a href="../lojas/editar.php?id=<?=$loja['id']?>">Editar</a>
-                        <a href="../lojas/excluir.php">Excluir</a>
+                        <a class="excluir" href="../lojas/excluir.php?id<?=$loja['id']?>">Excluir</a>
                     </td>                
                 </tr> 
         <?php } ?>
