@@ -16,7 +16,7 @@
 
     function buscarLojasPorID($conexao, $id){
         $sql = "SELECT * FROM Lojas WHERE id= :id";
-        $conexao = $conexao -> prepare($sql);
+        $consulta = $conexao -> prepare($sql);
         $consulta -> bindValue(':id', $id);
         $consulta -> execute();
         return $consulta -> fetch();
