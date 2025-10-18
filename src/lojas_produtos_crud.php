@@ -4,11 +4,25 @@
     require_once "../src/produtos_crud.php";
     require_once "../conecta.php";
 
-    function buscarProdutosPorLojas($conexao, $id){
-        $sql = "SELECT 
-                lojas_produtos.loja_id AS nome_loja, lojas.nome 
-                FROM lojas_produtos JOIN lojas ON
-                lojas.id = lojas_produtos.lojas_id";
+    function buscarProdutosPorLojas($conexao){
+        $sql = "SELECT
+                    lojas_produtos.loja_id,
+                    lojas.nome,
+                    lojas_produtos.produto_id,
+                    produtos.nome,
+                    lojas_produtos.estoque
+                FROM
+                    lojas_produtos
+                JOIN
+                    lojas
+                ON
+                    lojas_produtos.loja_id = lojas.id
+                JOIN
+                    produtos
+                ON
+                    lojas_produtos.produto_id = produtos.id";
         $consulta = $conexao -> query($sql);
         return $consulta -> fetchAll();
     }
+
+?>
