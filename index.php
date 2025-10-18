@@ -15,6 +15,7 @@
         <li><a href="./fornecedores/listar.php">Fornecedores</a></li>
         <li><a href="./produtos/listar.php">Produtos</a></li>
         <li><a href="./lojas/listar.php">Lojas</a></li>
+        <li><a href="./produtos_loja/listar.php">Estoques (Lojas x Produtos)</a></li>
     </ul>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
