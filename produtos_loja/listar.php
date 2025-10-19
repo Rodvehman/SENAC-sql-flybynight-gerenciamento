@@ -20,13 +20,14 @@
             <th>Loja</th>
             <th>Produto</th>
             <th>Quantidade</th>
+            <th>Ações</th>
         </tr>
         <?php
             foreach ($produtos_lojas as $produto_loja){?>
                 <tr>
-                    <td><?=$produto_loja['nome_loja']?></td>
-                    <td><?=$produto_loja['nome_produto']?>?></td>
-                    <td><?=$produto_loja['quantidade_produto']?></td>
+                    <td><?=$produto_loja['loja_id']?></td>
+                    <td><?=$produto_loja['produto_id']?></td>
+                    <td><?=$produto_loja['estoque']?></td>
                     <td>
                         <a href="../produtos_loja/editar.php">Editar</a>
                         <a href="../produtos_loja/excluir.php">Excluir</a>
