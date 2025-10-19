@@ -6,12 +6,8 @@
 
     function buscarProdutosPorLojas($conexao){
         $sql = "SELECT
-                    lojas_produtos.loja_id,
-                    lojas.nome AS
-                    loja,
-                    lojas_produtos.produto_id,
-                    produtos.nome AS
-                    produto,
+                    lojas.nome AS loja, 
+                    produtos.nome AS produto,
                     lojas_produtos.estoque
                 FROM
                     lojas_produtos
