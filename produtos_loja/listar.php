@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Listar Produtos x Loja</h1>
-    <a href="../inserir.php">+ Adicionar Estoque</a>
+    <a href="../produtos_loja/inserir.php">+ Adicionar Estoque</a>
     <a href="../index.php">🔙 Voltar</a>
     <table>
         <caption>Lista de Lojas e Estoques</caption>
@@ -30,7 +30,7 @@
                     <td><?=$produto_loja['estoque']?></td>
                     <td>
                         <a href="../produtos_loja/editar.php">Editar</a>
-                        <a href="../produtos_loja/excluir.php">Excluir</a>
+                        <a class="excluir" href="../produtos_loja/excluir.php">Excluir</a>
                     </td>
                 </tr>
         <?php } ?>
