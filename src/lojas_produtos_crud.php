@@ -23,9 +23,9 @@
         return $consulta -> fetchAll();
     }
 
-    function inserirEstoquePorLoja($conexao, $loja_id, $produtdo_id, $estoque){
-        $sql = "INSERT INTO lojas_produtos(loja_id, produto_id, estoque) VALUES 
-        (:loja_id, :produto_id, estoque)";
+    function inserirEstoquePorLoja($conexao, $loja_id, $produto_id, $estoque){
+        $sql = "INSERT INTO lojas_produtos(loja_id, produto_id, estoque) 
+                VALUES (:loja_id, :produto_id, :estoque)";
         $consulta = $conexao -> prepare($sql);
         $consulta -> bindValue(":loja_id", $loja_id);
         $consulta -> bindValue(":produto_id", $produto_id);

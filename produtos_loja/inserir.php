@@ -28,7 +28,7 @@
     <form action="" method="post">
         <div>
             <label for="loja">Loja:</label>
-                <select name="loja" type="text" id="loja" required>
+                <select name="loja" type="text" id="loja">
                     <option value="--Selecione--"></option>
                     <?php foreach ($produtos_lojas as $produto_loja): ?>
                     <option value="<?=$produto_loja['loja_id']?>"<?=$produto_loja['loja_nome']?>></option>                     
@@ -37,7 +37,7 @@
         </div>
         <div>
             <label for="produto">Produto: </label>
-            <select value="produto" type="text" id="produto" required>
+            <select value="produto" type="text" id="produto">
                 <option value="--Selecione--"></option>
                 <?php foreach ($produtos_lojas as $produto_loja): ?>
                 <option value="<?=$produto_loja['loja_id']?>"><?=$produto_loja['nome']?></option>

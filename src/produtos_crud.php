@@ -29,7 +29,8 @@
     }
 
     function inserirProduto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor_id){
-        $sql = "INSERT INTO produtos(nome, descricao, preco, quantidade, fornecedor_id) VALUES (:nome, :descricao, :preco, :quantidade, :fornecedor_id)";
+        $sql = "INSERT INTO produtos(nome, descricao, preco, quantidade, fornecedor_id) 
+                VALUES (:nome, :descricao, :preco, :quantidade, :fornecedor_id)";
         $consulta = $conexao -> prepare($sql);
         $consulta -> bindValue(":nome", $nome);
         $consulta -> bindValue(":descricao", $descricao);
