@@ -46,7 +46,7 @@
             <div>
             <label for="fornecedor_id">Fornecedor</label>
                 <select type="int" name="fornecedor" id="fornecedor">
-                    <option value="--Selecione--"></option>
+                    <option value="--Selecione--">--Selecione--</option>
                     <?php foreach($fornecedores as $fornecedor): ?>
                     <option value="<?=$fornecedor['id']?>"><?=$fornecedor['nome']?></option>
                     <?php endforeach ?>

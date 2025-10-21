@@ -43,7 +43,7 @@
              </div>
         <div>
             <label for="produto">Produto: </label>
-            <select value="produto" type="text" id="produto" required>
+            <select value="" name="produto_id" type="text" id="produto" required>
                 <option value="">--Selecione--</option>
                 <?php
                     $produtos = buscarProdutos($conexao);
@@ -55,7 +55,7 @@
         </div>
         <div>
             <label for="">Quantidade:</label>
-            <input class="quantidade" id="quantidade" type="int" required>
+            <input class="estoque" id="estoque" name="estoque" type="int" required>
         </div>
         <button type="submit">Enviar</button>
     </form>

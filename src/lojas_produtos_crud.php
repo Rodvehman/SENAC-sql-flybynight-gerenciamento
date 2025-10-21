@@ -6,19 +6,17 @@
 
     function buscarProdutosPorLojas($conexao){
         $sql = "SELECT
-                    lojas.nome AS loja, 
-                    produtos.nome AS produto,
-                    lojas_produtos.estoque
-                FROM
-                    lojas_produtos
-                JOIN
-                    lojas
-                ON
-                    lojas_produtos.loja_id = lojas.id
-                JOIN
-                    produtos
-                ON
-                    lojas_produtos.produto_id = produtos.id";
+                        lojas.id AS loja_id,
+                        lojas.nome AS loja, 
+                        produtos.id AS produto_id,
+                        produtos.nome AS produto,
+                        lojas_produtos.estoque
+                    FROM
+                        lojas_produtos
+                    JOIN
+                        lojas ON lojas_produtos.loja_id = lojas.id
+                    JOIN
+                        produtos ON lojas_produtos.produto_id = produtos.id";
         $consulta = $conexao -> query($sql);
         return $consulta -> fetchAll();
     }
