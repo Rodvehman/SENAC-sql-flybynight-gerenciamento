@@ -11,6 +11,10 @@
         require_once "../src/lojas_produtos_crud.php";
         require_once "../src/loja_crud.php";
         require_once "../src/produtos_crud.php";
+        
+        $produtos_lojas = buscarProdutosPorLojas($conexao);
+        $produtos = buscarProdutos($conexao);
+        $lojas = buscarLojas($conexao);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $loja_id = $_POST['loja_id'];
@@ -21,9 +25,6 @@
             exit;
         }
 
-        $produtos_lojas = buscarProdutosPorLojas($conexao);
-        $produtos = buscarProdutos($conexao);
-        $lojas = buscarLojas($conexao);
     ?>
     <h1>Adicionando Estoque</h1>
     <a href="../produtos_loja/listar.php">🔙 Voltar</a>
