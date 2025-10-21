@@ -30,7 +30,7 @@
     <form action="" method="post">
         <div>
             <label for="loja_id">Loja:</label>
-                <select name="loja_id" id="loja_id">
+                <select name="loja_id" id="loja_id" required>
                     <option value="">--Selecione--</option>
                     <?php 
                         $lojas = buscarLojas($conexao);
@@ -42,7 +42,7 @@
              </div>
         <div>
             <label for="produto">Produto: </label>
-            <select value="produto" type="text" id="produto">
+            <select value="produto" type="text" id="produto" required>
                 <option value="">--Selecione--</option>
                 <?php
                     $produtos = buscarProdutos($conexao);
