@@ -22,25 +22,33 @@
         }
 
         $produtos_lojas = buscarProdutosPorLojas($conexao);
+        $produtos = buscarProdutos($conexao);
+        $lojas = buscarLojas($conexao);
     ?>
     <h1>Adicionando Estoque</h1>
     <a href="../produtos_loja/listar.php">🔙 Voltar</a>
     <form action="" method="post">
         <div>
-            <label for="loja">Loja:</label>
-                <select name="loja" type="text" id="loja">
-                    <option value="--Selecione--"></option>
-                    <?php foreach ($produtos_lojas as $produto_loja): ?>
-                    <option value="<?=$produto_loja['loja_id']?>"<?=$produto_loja['loja_nome']?>></option>                     
+            <label for="loja_id">Loja:</label>
+                <select name="loja_id" id="loja_id">
+                    <option value="">--Selecione--</option>
+                    <?php 
+                        $lojas = buscarLojas($conexao);
+                    
+                        foreach ($lojas as $loja): ?>
+                            <option value="<?=$loja['id']?>"><?=$loja['nome']?></option>
                     <?php endforeach ?>
                 </select>
-        </div>
+             </div>
         <div>
             <label for="produto">Produto: </label>
             <select value="produto" type="text" id="produto">
-                <option value="--Selecione--"></option>
-                <?php foreach ($produtos_lojas as $produto_loja): ?>
-                <option value="<?=$produto_loja['loja_id']?>"><?=$produto_loja['nome']?></option>
+                <option value="">--Selecione--</option>
+                <?php
+                    $produtos = buscarProdutos($conexao);
+        
+                    foreach($produtos as $produto): ?>
+                        <option value="<?=$produto['id']?>"><?=$produto['nome_produto']?></option>
                 <?php endforeach ?>
             </select>
         </div>
